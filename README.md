@@ -27,3 +27,15 @@ Clone the repo into your custom themes directory:
 
 ```bash
 git clone https://github.com/x017/furusato.nvim ~/.config/nvim/lua/colors/furusato 
+
+
+## Customaztion 
+```lua
+    vim.g.setup = {
+      transparent = true,
+      italic_comments = true,
+      italic_keywords = false,
+      italic_functions = false,
+      italic_variables = false,
+    }
+```
