@@ -1,6 +1,5 @@
-
-
 # Furusato.nvim
+> **“Furusato” (ふるさと)** — *a cozy place you return to.*
 
 A dark, modern Neovim colorscheme with soft blues, greys, and subtle contrasts.  
 Supports Treesitter, LSP, Git signs, Telescope, and file explorers (NvimTree / Neo-tree).
