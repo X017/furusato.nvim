@@ -1,41 +1,98 @@
 
+
 # Furusato.nvim
-> **“Furusato” (ふるさと)** — *a cozy place you return to.*
 
-Furusato is a **dark, cozy colorscheme** designed specifically for [NvChad](https://github.com/NvChad/NvChad).  
-It’s built for night-time coding sessions — calm on the eyes and easy to focus with.
+A dark, modern Neovim colorscheme with soft blues, greys, and subtle contrasts.  
+Supports Treesitter, LSP, Git signs, Telescope, and file explorers (NvimTree / Neo-tree).
 
-Enjoy <3 !
+## ✨ Features
+- Full **Neovim** colorscheme (`colors/furusato.lua`)
+- **Transparent background** option
+- Configurable **italics** (comments, keywords, functions, variables)
+- **Treesitter** highlight groups
+- **LSP diagnostics** + LspReference highlights
+- **GitSigns** colors
+- **Telescope** styling
+- **NvimTree / Neo-tree** support
+- **Mini.statusline** integration
 
----
+## 📦 Installation
 
-## Screenshots
-
-<img src="screenshots/screen1.png" alt="Preview 1" width="600"/>
-<img src="screenshots/screen2.png" alt="Preview 2" width="600"/>
-
----
-
-## ⚠️ Requirements
-- [Neovim](https://neovim.io) `>= 0.9`
-
----
-
-## 📦 Installation (Neovim)
-
-Clone the repo into your custom themes directory:
-
-```bash
-git clone https://github.com/x017/furusato.nvim ~/.config/nvim/lua/colors/furusato 
-```
-
-## Customaztion 
+### Lazy.nvim
 ```lua
+{
+  "x017/furusato.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
     vim.g.setup = {
-      transparent = true,
+      transparent = false,
       italic_comments = true,
       italic_keywords = false,
       italic_functions = false,
       italic_variables = false,
     }
+    vim.cmd("colorscheme furusato")
+  end
+}
 ```
+
+### Packer
+```lua
+use {
+  "x017/furusato.nvim",
+  config = function()
+    vim.g.setup = {}
+    vim.cmd("colorscheme furusato")
+  end
+}
+```
+
+### Manual
+Place the file at:
+
+```
+~/.config/nvim/colors/furusato.lua
+```
+
+Then:
+
+```
+:colorscheme furusato
+```
+
+## ⚙️ Configuration
+
+All configuration uses `vim.g.setup`:
+
+```lua
+vim.g.setup = {
+  transparent = true,
+  italic_comments = true,
+  italic_keywords = false,
+  italic_functions = false,
+  italic_variables = false,
+}
+```
+
+## 🎨 Palette Overview
+
+Furusato uses muted cool tones:
+
+- Blues + sea-blues
+- Muted pinks
+- Warm yellows
+- Soft greys
+- Dark minimal background
+
+## ✔️ Supported Integrations
+- Treesitter (`@variables`, `@functions`, etc.)
+- LSP diagnostics + references
+- GitSigns
+- Telescope UI
+- NvimTree + Neo-tree
+- Mini.statusline
+
+---
+
+Enjoy the Furusato atmosphere 🌙
